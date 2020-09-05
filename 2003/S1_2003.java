@@ -2,9 +2,7 @@
 // Written by: Arnav Pal
 // Accepted by DMOJ: 100/100, 0.299s, 54.86 MB 
 import java.util.Scanner;
-
 public class S1_2003 {
-
     public static void main(String[] args) {
         int pointer = 1;
         Scanner input = new Scanner(System.in);
