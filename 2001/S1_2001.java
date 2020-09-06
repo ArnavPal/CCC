@@ -2,7 +2,7 @@
 // Written by: Arnav Pal
 // Passes 3/4 test cases on DMOJ (not sure why): 30/40, 0.579s, 58.27 MB
 import java.util.*;
-class Main {
+public class S1_2001 {
   private static Integer diamondPointer;
   private static Integer heartPointer;
   private static Integer spadePointer;
