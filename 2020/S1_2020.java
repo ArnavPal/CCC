@@ -1,21 +1,21 @@
+// Problem name: Surmising a Sprinter's Speed
+// Written by: Arnav Pal
+// Only passes 2/3 batches on DMOJ (overtime)
 import java.util.*;
 import java.util.Collections;
 import java.util.ArrayList;
 public class S1_2020 {
   public static void main(String[] args) {
-
     Scanner input = new Scanner(System.in);
     int numInputs = input.nextInt();
     double [] time1 = new double [numInputs];
     double [] distance1 = new double [numInputs];
-
     for (int i = 0; i < numInputs; i++)
     {
       time1[i] = input.nextDouble();
       distance1[i] = input.nextDouble();
     }
     input.close();
-
     ArrayList<Double>time2 = new ArrayList<>();
     ArrayList<Double>distance2 = new ArrayList<>();
     ArrayList<Double>results = new ArrayList<>();
