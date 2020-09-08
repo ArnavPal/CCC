@@ -7,7 +7,7 @@ public class S1_2004 {
     Scanner input = new Scanner(System.in);
     int n = input.nextInt();
     input.nextLine();
-    ArrayList <String>answer = new ArrayList<>();
+    ArrayList<String>answer = new ArrayList<>();
     for (int a = 0; a < n; a++)
     {
       ArrayList<String>words = new ArrayList<>();
