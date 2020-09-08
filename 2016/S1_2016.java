@@ -2,7 +2,6 @@
 // Written by: Arnav Pal
 // Accepted by DMOJ: 15/15, 2.762s, 51.40 MB
 import java.util.*;
-import java.util.Arrays;
 public class S1_2016 {
   public static void main(String[] args) {
       Scanner input = new Scanner(System.in);
