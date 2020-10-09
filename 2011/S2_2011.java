@@ -27,13 +27,6 @@ public class S2_2011 {
         counter++;
       }
     }
-    if (counter > 0)
-    {
-      System.out.println(counter);
-    }
-    else
-    {
-      System.out.println("0");
-    }
+    System.out.println(counter);
   }
 }
