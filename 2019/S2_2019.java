@@ -1,54 +1,49 @@
 // Problem name: Pretty Average Primes
 // Written by: Arnav Pal
-// Overtime on DMOJ: Needs Work
+// Overtime on DMOJ (6/15): Needs Work
 import java.util.*;
 public class S2_2019 {
-  private static Integer n;
-  public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    int a = input.nextInt();
-    for (int i = 0; i < a; i++)
-    {
-      n = input.nextInt();
+  public static boolean checker(int n) {
+    for (int i = 2; i < n; i++) {
+      if (n % i == 0) return false;
     }
-    input.close();
-    int p1 = n;
-    int p2 = n;
-    int counter = 0;
-    ArrayList<String>bool1 = new ArrayList<>();
-    ArrayList<String>bool2 = new ArrayList<>();
-    while (counter == 0)
-    {
-      p1--;
-      p2++;
-      for (int i = 2; i < p1; i++)
-      {
-        if (p1%i != 0)
-        {
-          bool1.add("not divisible");
-        }
-        else
-        {
-          bool1.add("divisible");
-        }
-      }
-      for (int i = 2; i < p2; i++)
-      {
-        if (p2%i != 0)
-        {
-          bool2.add("not divisible");
-        }
-        else
-        {
-          bool2.add("divisible");
-        }
-      }
-      if (bool1.contains("divisible")==false && bool2.contains("divisible")==false)
-      {
-        counter = 1;
-        break;
-      }
-    }
-    System.out.println(p1 + " " + p2);
+    return true;
   }
-}
+  public static int[] finder (int n) {
+    int [] f = new int [2];
+    int lp = n;
+    int rp = n;
+    while (true) {
+      if (checker(rp) && checker(lp)) {
+        f[0] = lp;
+        f[1] = rp;
+        return f;
+      }
+      rp++;
+      lp--;
+    }
+  }
+  public static void main(String[] args) {
+    ArrayList<Integer>answer = new ArrayList<>();
+    Scanner in = new Scanner(System.in);
+    int n = 0;
+    int u = in.nextInt();
+    for (int i = 1; i <= u; i++) {
+      n = in.nextInt();
+      int [] ans = finder(n);
+      answer.add(ans[0]);
+      answer.add(ans[1]);
+      //System.out.println(ans[0] + " " + ans[1]);
+      //in.nextLine();
+      }
+      for (int i = 0; i < answer.size(); i+=2) {
+        System.out.println(answer.get(i) + " " + answer.get(i+1));
+      }
+
+
+      //System.out.println(answer);
+      //int [] ans = finder(n);
+      //System.out.println(ans[0] + " " + ans[1]);
+    }
+
+} 
