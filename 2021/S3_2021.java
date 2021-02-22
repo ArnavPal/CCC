@@ -13,7 +13,7 @@ public class S3_2021 {
     ArrayList <Long> times = new ArrayList<>();
     for (int i = 0; i < n; i++) {
       String person = in.nextLine();
-      String[]splitted = person.split("\\s+");
+      String [] splitted = person.split("\\s+");
       p.add(Long.parseLong(splitted[0]));
       w.add(Long.parseLong(splitted[1]));
       d.add(Long.parseLong(splitted[2]));
