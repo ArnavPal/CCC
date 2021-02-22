@@ -27,7 +27,7 @@ public class S3_2021 {
         long time = 0;
         for (int i = 0; i < p.size(); i++) {
           if (c > p.get(i)) {
-            if (c - (p.get(i) + d.get(i)) > 0) time += Math.abs((p.get(i) + d.get(i)) - c)* w.get(i);
+            if (c - (p.get(i) + d.get(i)) > 0) time += Math.abs((p.get(i) + d.get(i)) - c) * w.get(i);
           }
           else if (c < p.get(i)) {
             if ((p.get(i) - d.get(i)) - c > 0) time += Math.abs((p.get(i) - d.get(i)) - c) * w.get(i);
